@@ -50,8 +50,7 @@
 #include "sys_common.h"
 
 /* USER CODE BEGIN (1) */
-#include "fw_gpio.h"
-#include "hardware_peripherals.h"
+
 /* USER CODE END */
 
 /** @fn void main(void)
@@ -68,16 +67,6 @@
 int main(void)
 {
 /* USER CODE BEGIN (3) */
-
-	int i = 0;
-    fw_gpio_init();
-    while(1) 
-    {
-        for(i = 0; i<100000; i++);
-        gioToggleBit(USER_LEDA);
-        for(i = 0; i<100000; i++);
-        gioToggleBit(USER_LEDB);
-    }
 
 /* USER CODE END */
 

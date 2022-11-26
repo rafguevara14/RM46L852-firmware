@@ -130,7 +130,7 @@ typedef struct gio_config_reg
 
 #define GIO_PORTBDIR_CONFIGVALUE	((uint32)((uint32)0U << 0U) | (uint32)((uint32)1U << 1U) | (uint32)((uint32)1U << 2U) | (uint32)((uint32)0U << 3U) | (uint32)((uint32)0U << 4U) | (uint32)((uint32)0U << 5U) | (uint32)((uint32)0U << 6U) | (uint32)((uint32)0U << 7U))
 #define GIO_PORTBPDR_CONFIGVALUE	((uint32)((uint32)0U << 0U) | (uint32)((uint32)0U << 1U) | (uint32)((uint32)0U << 2U) | (uint32)((uint32)0U << 3U) | (uint32)((uint32)0U << 4U) | (uint32)((uint32)0U << 5U) | (uint32)((uint32)0U << 6U) | (uint32)((uint32)0U << 7U))
-#define GIO_PORTBPSL_CONFIGVALUE	((uint32)((uint32)0U << 0U) | (uint32)((uint32)1U << 1U) | (uint32)((uint32)1U << 2U) | (uint32)((uint32)0U << 3U) | (uint32)((uint32)0U << 4U) | (uint32)((uint32)0U << 5U) | (uint32)((uint32)0U << 6U) | (uint32)((uint32)0U << 7U))
+#define GIO_PORTBPSL_CONFIGVALUE	((uint32)((uint32)0U << 0U) | (uint32)((uint32)0U << 1U) | (uint32)((uint32)0U << 2U) | (uint32)((uint32)0U << 3U) | (uint32)((uint32)0U << 4U) | (uint32)((uint32)0U << 5U) | (uint32)((uint32)0U << 6U) | (uint32)((uint32)0U << 7U))
 #define GIO_PORTBPULDIS_CONFIGVALUE	((uint32)((uint32)0U << 0U) | (uint32)((uint32)0U << 1U) | (uint32)((uint32)0U << 2U) |(uint32)((uint32)0U << 3U) | (uint32)((uint32)0U << 4U) | (uint32)((uint32)0U << 5U) | (uint32)((uint32)0U << 6U) | (uint32)((uint32)0U << 7U))
 
 
@@ -170,7 +170,5 @@ void gioGetConfigValue(gio_config_reg_t *config_reg, config_value_type_t type);
 #ifdef __cplusplus
 }
 #endif /*extern "C" */
-
-void fw_gpio_init();
 
 #endif
