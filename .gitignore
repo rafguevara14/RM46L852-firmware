@@ -1,0 +1,63 @@
+/.metadata/
+/Debug/
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.jxbrowser-data/ChannelIDS
+.jxbrowser-data/ChannelIDS-journal
+.jxbrowser-data/Cookies
+.jxbrowser-data/Cookies-journal
+.jxbrowser-data/Favicons
+.jxbrowser-data/Favicons-journal
+.jxbrowser-data/History
+.jxbrowser-data/History-journal
+.jxbrowser-data/Login Data
+.jxbrowser-data/Login Data-journal
+.jxbrowser-data/QuotaManager
+.jxbrowser-data/QuotaManager-journal
+.jxbrowser-data/user_prefs.json
+.jxbrowser-data/Visited Links
+.jxbrowser-data/Web Data
+.jxbrowser-data/Web Data-journal
+.jxbrowser-data/Cache/data_0
+.jxbrowser-data/Cache/data_1
+.jxbrowser-data/Cache/data_2
+.jxbrowser-data/Cache/data_3
+.jxbrowser-data/Cache/f_000001
+.jxbrowser-data/Cache/f_000002
+.jxbrowser-data/Cache/f_000003
+.jxbrowser-data/Cache/f_000004
+.jxbrowser-data/Cache/f_000005
+.jxbrowser-data/Cache/f_000006
+.jxbrowser-data/Cache/f_000007
+.jxbrowser-data/Cache/f_000008
+.jxbrowser-data/Cache/index
+.jxbrowser-data/databases/Databases.db
+.jxbrowser-data/databases/Databases.db-journal
+.jxbrowser-data/GPUCache/data_0
+.jxbrowser-data/GPUCache/data_1
+.jxbrowser-data/GPUCache/data_2
+.jxbrowser-data/GPUCache/data_3
+.jxbrowser-data/GPUCache/index
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/000003.log
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/CURRENT
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/LOCK
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/LOG
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/LOG.old
+.jxbrowser-data/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+.jxbrowser-data/Local Storage - EXT/file_null.localstorage
+.jxbrowser-data/Local Storage/leveldb/000003.log
+.jxbrowser-data/Local Storage/leveldb/CURRENT
+.jxbrowser-data/Local Storage/leveldb/LOCK
+.jxbrowser-data/Local Storage/leveldb/LOG
+.jxbrowser-data/Local Storage/leveldb/LOG.old
+.jxbrowser-data/Local Storage/leveldb/MANIFEST-000001
+.jxbrowser-data/Service Worker/CacheStorage/32cadb2b6d359d069dd3f3d132c212a43d223701/index.txt
+.jxbrowser-data/Sync Data/LevelDB/000003.log
+.jxbrowser-data/Sync Data/LevelDB/CURRENT
+.jxbrowser-data/Sync Data/LevelDB/LOCK
+.jxbrowser-data/Sync Data/LevelDB/LOG
+.jxbrowser-data/Sync Data/LevelDB/LOG.old
+.jxbrowser-data/Sync Data/LevelDB/MANIFEST-000001
+.settings/org.eclipse.cdt.codan.core.prefs
+.settings/org.eclipse.cdt.debug.core.prefs
+.settings/org.eclipse.core.resources.prefs
