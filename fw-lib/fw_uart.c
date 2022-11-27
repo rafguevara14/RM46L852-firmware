@@ -1,8 +1,6 @@
-
 #include "fw_uart.h"
 #include "stdarg.h"
 #include "stdio.h"
-
 
 
 void PCInit(uint32 baud)

@@ -6,15 +6,24 @@
 #include "rti.h"
 #include "stdbool.h"
 
-// https://www.ti.com/lit/df/sprr399/sprr399.pdf?ts=1614825263664
-
-#define USER_LEDA gioPORTB, 1
-#define USER_LEDB gioPORTB, 2
+/*
+*	Official schematic: https://www.ti.com/lit/df/sprr399/sprr399.pdf?ts=1614825263664
+*/
 
 #define PC_UART scilinREG
 
+/*
+*   GIO peripheral
+*   Configure driver code generation: 
+*   - Enable GIO driver
+*	- Set output direction
+*/
+#define USER_LEDA gioPORTB, 1
+#define USER_LEDB gioPORTB, 2
+
 
 /*
+*   RTI peripheral
 *   Configure driver code generation: 
 *   - Enable RTI driver
 *	- Enable VIM interrupt compare block
