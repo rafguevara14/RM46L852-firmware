@@ -1,10 +1,13 @@
 #ifndef FW_HARDWARE_PERIPHERALS_H
 #define FW_HARDWARE_PERIPHERALS_H
 
+#include "stdbool.h"
+
 #include "gio.h"
 #include "sci.h"
 #include "rti.h"
-#include "stdbool.h"
+#include "adc.h"
+#include "het.h"
 
 /*
 *	Official schematic: https://www.ti.com/lit/df/sprr399/sprr399.pdf?ts=1614825263664
@@ -18,8 +21,29 @@
 *   - Enable GIO driver
 *	- Set output direction
 */
-#define USER_LEDA gioPORTB, 1
+#define USER_LEDA gioPORTB, 1 // ******TODO: Toggle special pin muxing to get output in halcogen look how to do this in code
 #define USER_LEDB gioPORTB, 2
+
+// special pin muxing that disables het2 outputs to get GIOB_2
+// launchpad has external pull up resistors
+#define USER_SWITCHA_PIN 2
+#define USER_SWITCHA gioPORTB, USER_SWITCHA_PIN // ******TODO: Toggle special pin muxing to get output in halcogen look how to do this in code
+#define USER_SWITCHB hetPORT1, 15
+#define USER_SWITCHB_PORT hetPORT1
+
+/*
+*   ADC peripheral
+*   Configure driver code generation: 
+*   - Enable channel selection (ADC1 Group 1, Pin 6 pg 10)
+*	- Enable Continuous Conversion
+*	- Set FiFo size (1)
+* 	https://www.youtube.com/watch?v=YOBWhFE0LZg
+*/
+#define LIGHT_REG adcREG1
+#define LIGHT_SENSOR LIGHT_REG, adcGROUP1 
+#define LIGHT_MAX_VAL 4095
+#define LIGHT_REFERENCE_MV 3300
+#define ADC_TO_VOLTAGE(VAL, MAX_BITS, MAX_MILLIVOLTS) (100*VAL / MAX_BITS) * (MAX_MILLIVOLTS / 100)
 
 
 /*
