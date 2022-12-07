@@ -11,6 +11,7 @@
 #include "hardware_peripherals.h"
 
 void fw_adc_init();
+
 uint16_t fw_poll_light_sensor();
 
 

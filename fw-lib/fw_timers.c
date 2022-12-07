@@ -1,11 +1,10 @@
 
 #include "fw_timers.h"
 
-static callback functions[3];
+static callback functions[NUMBER_OF_HARDWARE_TIMERS];
 
 void fw_timer_init(uint32 compare, callback func)
 {
-	rtiInit();
 	rtiEnableNotification(compare);
 	_enable_IRQ();
 
@@ -14,19 +13,12 @@ void fw_timer_init(uint32 compare, callback func)
 
 void fw_timer_counter(uint32 counter, uint8_t start)
 {	
-	if (start)
-	{
-		rtiStartCounter(counter); 
-	}
-	else
-	{
-		rtiStopCounter(counter);
-	}
+	start ? rtiStartCounter(counter) : rtiStopCounter(counter);
 }
 
 void rtiNotification(uint32 notification)
 {
-	if ( 0 < notification && notification < 3)
+	if ( 0 < notification && notification < NUMBER_OF_HARDWARE_TIMERS)
 	{
 		functions[notification]();
 	}

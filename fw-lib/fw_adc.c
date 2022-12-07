@@ -9,7 +9,8 @@
 
 void fw_adc_init()
 {
-	adcInit();
+	// do nothing for now...
+	// TODO: See if we can dynamically configure ADC pins without halcogen 
 }
 
 uint16_t fw_poll_light_sensor()

@@ -5,7 +5,6 @@
 
 void PCInit(uint32 baud)
 {
-	sciInit();
 	sciSetBaudrate(PC_UART, baud);
 }
 
