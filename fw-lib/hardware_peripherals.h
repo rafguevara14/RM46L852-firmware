@@ -8,28 +8,38 @@
 #include "rti.h"
 #include "adc.h"
 #include "het.h"
+#include "mibspi.h"
 
 /*
 *	Official schematic: https://www.ti.com/lit/df/sprr399/sprr399.pdf?ts=1614825263664
 */
 
+void halcogen_init();
+
+/*
+*   SCI peripheral
+*   Configure driver code generation: 
+*   - Enable SCI driver
+*/
 #define PC_UART scilinREG
 
 /*
 *   GIO peripheral
 *   Configure driver code generation: 
 *   - Enable GIO driver
-*	- Set output direction
 */
-#define USER_LEDA gioPORTB, 1 // ******TODO: Toggle special pin muxing to get output in halcogen look how to do this in code
+#define USER_LEDA gioPORTB, 1
 #define USER_LEDB gioPORTB, 2
 
-// special pin muxing that disables het2 outputs to get GIOB_2
-// launchpad has external pull up resistors
-#define USER_SWITCHA_PIN 2
-#define USER_SWITCHA gioPORTB, USER_SWITCHA_PIN // ******TODO: Toggle special pin muxing to get output in halcogen look how to do this in code
-#define USER_SWITCHB hetPORT1, 15
-#define USER_SWITCHB_PORT hetPORT1
+
+/*
+*   MIBSPI peripheral (as GIO)
+*   Configure driver code generation: 
+* 	- Go to MIBSPI Port tab
+*   - Ensure the CS pins are set in GIO mode
+*/
+#define USER_SWITCHA mibspiPORT3, 0 
+#define USER_SWITCHB mibspiPORT1, 4 
 
 /*
 *   ADC peripheral
@@ -53,6 +63,7 @@
 *	- Enable VIM interrupt compare block
 *	- Set a desired compare period
 */
+#define NUMBER_OF_HARDWARE_TIMERS 3
 #define HW_TIMER0_PERIOD_MS 1
 #define MS_TO_HW_TICKS(PERIOD_MS, TICK_PERIOD_MS) PERIOD_MS / TICK_PERIOD_MS
 #define HW_TIMER_COMPARE0 rtiNOTIFICATION_COMPARE0
