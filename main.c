@@ -19,10 +19,10 @@ void global_clock()
 {
 	if (ticks % MS_TO_HW_TICKS(1000, HW_TIMER0_PERIOD_MS) == 0)
 	{
-		#ifndef USE_BUTTONS 
+		#ifndef USE_BUTTONS
 		fw_gpio_set(USER_LEDA, FW_GPIO_TOGGLE);
 		fw_gpio_set(USER_LEDB, FW_GPIO_TOGGLE);
-		#endif 
+		#endif
 	}
 
 	if (ticks % MS_TO_HW_TICKS(2000, HW_TIMER0_PERIOD_MS) == 0)
@@ -32,6 +32,14 @@ void global_clock()
 
 	ticks++;
 }
+
+void buttona_func()
+{
+	fwprintf("a");
+}
+
+
+// USER_LEDB does not work because it has been disabled to allow button interrupts as input in halcogen
 
 
 int main(void)
@@ -48,8 +56,14 @@ int main(void)
 	fw_adc_init();
 	PCInit(9600);
 
+	#ifdef USE_BUTTONS
+
+	/* Initialize buttons as interrupts */
+	fw_gpio_button_interrupts_init(buttona_func, FW_GPIO_RISING);
+
+	#else
 	/* Initialize buttons */
-	fw_gpio_button_init(FW_GPIO_PULLDOWN, FW_GPIO_PULLUP);
+	fw_gpio_button_init();
 
 	/* Initialize leds */
 	fw_gpio_led_init();
@@ -57,6 +71,7 @@ int main(void)
 	/* Set leds to opposite values */
 	fw_gpio_set(USER_LEDA, FW_GPIO_OFF);
 	fw_gpio_set(USER_LEDB, FW_GPIO_ON);
+	#endif
 
 	/* start hardware timer */
 	fw_timer_counter(HW_TIMER_COUNTER0, true);
