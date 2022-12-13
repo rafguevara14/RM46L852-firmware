@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.RM46L852.ccxml.Texas Instruments XDS110 USB Debug Probe/CortexR4" value="${build_artifact:RM46L852-firmware}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.RM46L852.ccxml.Texas Instruments XDS110 USB Debug Probe/CortexR4" value="RM46L852-firmware"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:RM46L852-firmware}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.RM46L852.ccxml.Texas Instruments XDS110 USB Debug Probe/CortexR4" value="C:/personal-repos\RM46L852-firmware\Debug\RM46L852-firmware.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.RM46L852.ccxml.Texas Instruments XDS110 USB Debug Probe/CortexR4" value="C:/personal-repos\RM46L852-firmware\Buttons\RM46L852-firmware.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/RM46L852-firmware"/>
 </listAttribute>
