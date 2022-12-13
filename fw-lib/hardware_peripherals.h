@@ -9,6 +9,9 @@
 #include "adc.h"
 #include "het.h"
 #include "mibspi.h"
+#include "sys_vim.h"
+
+typedef void (*callback)();
 
 /*
 *	Official schematic: https://www.ti.com/lit/df/sprr399/sprr399.pdf?ts=1614825263664
@@ -29,7 +32,7 @@ void halcogen_init();
 *   - Enable GIO driver
 */
 #define USER_LEDA gioPORTB, 1
-#define USER_LEDB gioPORTB, 2
+#define USER_LEDB gioPORTB, 2 // used as gpio interrupt for button. can only be changed in halcogen
 
 
 /*

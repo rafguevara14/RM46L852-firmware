@@ -9,6 +9,7 @@
 
 void halcogen_init()
 {
+    vimInit();
     gioInit();
     adcInit();
     rtiInit();
